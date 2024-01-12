@@ -1,11 +1,11 @@
 ---
 - hosts: all
   gather_facts: yes
-  become: yes
-  become_method: enable
+  become: true
   become_user: pk
   tasks:
     - name: Perform a dist-upgrade.
+      become: true
       ansible.builtin.apt:
         upgrade: dist
         update_cache: yes
