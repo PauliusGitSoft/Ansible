@@ -2,7 +2,7 @@
 - hosts: all
   gather_facts: yes
   become: yes
-  become_method: sudo
+  become_method: enabled
   become_user: pk
   tasks:
     - name: Perform a dist-upgrade.
