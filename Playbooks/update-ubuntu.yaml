@@ -3,7 +3,7 @@
   #gather_facts: yes
   become: yes
   become_method: sudo
-  become_user: root
+  become_user: pk
   connection: ssh
   tasks:
     - name: Perform a dist-upgrade.
