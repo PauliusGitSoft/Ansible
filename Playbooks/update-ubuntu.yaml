@@ -1,9 +1,10 @@
 ---
 - hosts: all
   #gather_facts: yes
-  #become: true
-  #become_user: pk
+  become: yes
   become_method: sudo
+  become_user: root
+  connection: ssh
   tasks:
     - name: Perform a dist-upgrade.
       ansible.builtin.apt:
